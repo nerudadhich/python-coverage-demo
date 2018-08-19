@@ -44,3 +44,13 @@ def get_state(state_id):
     except Exception as e:
         app.logger.error('Error while get state %s', str(e))
         return jsonify({"error": str(e)}), 500
+
+@app.route('/state/<int:state_id>/city/list')
+def get_cities_of_state(state_id):
+    try:
+        state = State()
+        city_list = state.get_cities_of_state(state_id)
+        return jsonify(city_list)
+    except Exception as e:
+        app.logger.error('Error while get cities of state %s', str(e))
+        return jsonify({"error": str(e)}), 500
