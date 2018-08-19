@@ -1,22 +1,22 @@
 import json
 
-class City:    
+class State:    
     """city details"""
     def all(self):
         try:
-            with open('api_data/city.json') as f:
+            with open('api_data/state.json') as f:
                 data = json.load(f)
                 return data
         except Exception as e:
             return []
 
-    def get_city(self, city_id):
+    def get_state(self, state_id):
         try:
-            with open('api_data/city.json') as f:
+            with open('api_data/state.json') as f:
                 data = json.load(f)
-                for city in data:
-                    if(city["id"] == city_id):
-                        return city
+                for state in data:
+                    if(state["id"] == state_id):
+                        return state
                 return {}
         except Exception as e:
             return {}

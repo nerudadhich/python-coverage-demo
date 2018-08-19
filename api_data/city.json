@@ -2,5 +2,9 @@
     {"id": 1, "name": "pune"},
     {"id": 2, "name": "jaipur"},
     {"id": 3, "name": "mumbai"},
-    {"id": 4, "name": "delhi"}
+    {"id": 4, "name": "jhalndra"},
+    {"id": 5, "name": "ajmer"},
+    {"id": 6, "name": "chandigrah"},
+    {"id": 7, "name": "banglore"},
+    {"id": 8, "name": "mysoor"}
 ]
