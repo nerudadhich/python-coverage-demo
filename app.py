@@ -13,3 +13,13 @@ def get_cities():
     except Exception as e:
         app.logger.error('Error while city list %s', str(e))
         return jsonify({"error": str(e)}), 500
+
+@app.route('/city/<int:city_id>')
+def get_city(city_id):
+    try:
+        city = City()
+        city = city.get_city(city_id)
+        return jsonify(city)
+    except Exception as e:
+        app.logger.error('Error while city list %s', str(e))
+        return jsonify({"error": str(e)}), 500
